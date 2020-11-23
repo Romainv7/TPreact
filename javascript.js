@@ -1,4 +1,4 @@
-const anagrammes = (stringA, stringB) => {
+const anagrams = (stringA, stringB) => {
   /**
    * stringA est égale à stringB si et seulement s'ils partagent les mêmes
    * caractères alphabétiques dans la même quantité.
@@ -14,10 +14,11 @@ const anagrammes = (stringA, stringB) => {
      return false;
    }
 
-   let strg1 = stringA.split('').sort().join('');
-   let strg2 = stringB.split('').sort().join('');
 
-   return (strg1==strg2);
+   let strg1 = stringA.toLowerCase().split('').sort().join('');
+   let strg2 = stringB.toLowerCase().split('').sort().join('');
+
+   return (strg1===strg2);
 
 };
 
@@ -57,7 +58,24 @@ const fizzBuzz = (n) => {
  * console.log(4)
  * console.log('buzz')
  */
+ for(cpt = 1; cpt <= n; cpt++){
 
+         if( cpt%3 != 0 &&  cpt%5 != 0){
+             console.log(cpt);
+         }
+         else {
+             if(cpt%3 == 0 && cpt%5 == 0){
+                 console.log('fizzbuzz');
+             } else {
+                 if(cpt%3 == 0){
+                     console.log('fizz');
+                 }
+                 if(cpt%5 == 0){
+                     console.log('buzz');
+                 }
+             }
+         }
+     }
 };
 
 const spirale = (n) => {
@@ -111,12 +129,14 @@ const puissance4 = (grid) => {
  *   [ 2, 2, 1, 1, 2 ]]
  *   ) = 0
  */
+
+
 }
 
 module.exports = {
   fizzBuzz,
   puissance4,
   spirale,
-  anagrammes,
+  anagrams,
   Stack
 }

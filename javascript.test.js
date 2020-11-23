@@ -1,10 +1,10 @@
-const { anagrammes, Stack, spirale, puissance4, fizzBuzz } = require('./javascript.js');
+const { anagrams, Stack, spirale, puissance4, fizzBuzz } = require('./javascript.js');
 
 
 describe('La fonction anagramme', () => {
   test('doit exister', () => {
-    expect(anagrammes).toBeDefined();
-    expect(typeof anagrammes).toEqual('function');
+    expect(anagrams).toBeDefined();
+    expect(typeof anagrams).toEqual('function');
   });
 
   test('doit valider deux phrases anagrammes.', () => {
