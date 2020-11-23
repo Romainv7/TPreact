@@ -41,6 +41,25 @@ class Stack {
  * s.pop(); // returns 2
  * s.peek(); // returns 1
  */
+ constructor() {
+    this.out = -1;
+    this.first = -1;
+    this.tab = new Array();
+  }
+
+    push(n){
+
+        this.tab.push(n);
+    }
+
+    peek() {
+        return this.tab[this.first];
+    }
+
+    pop(){
+
+        return this.tab.pop();
+    }
 };
 
 
